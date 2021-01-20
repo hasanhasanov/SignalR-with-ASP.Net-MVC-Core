@@ -1,9 +1,9 @@
-namespace chat.SignalR
+namespace Chat.SignalR
 {
     using System;
     using System.Threading.Tasks;
-    using chat.Cache;
-    using chat.Services.Interfaces;
+    using Chat.Cache;
+    using Chat.Services.Interfaces;
     using Microsoft.AspNetCore.SignalR;
     using Microsoft.Extensions.Logging;
 

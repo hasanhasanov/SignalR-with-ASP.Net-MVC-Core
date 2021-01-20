@@ -1,4 +1,4 @@
-namespace chat.Data.Entities
+namespace Chat.Data.Entities
 {
     public class Conversation : BaseEntity
     {

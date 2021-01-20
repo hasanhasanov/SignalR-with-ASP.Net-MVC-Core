@@ -1,11 +1,11 @@
 namespace chat
 {
-    using chat.Cache;
-    using chat.Data;
-    using chat.Data.Repositories;
-    using chat.Services.Engines;
-    using chat.Services.Interfaces;
-    using chat.SignalR;
+    using Chat.Cache;
+    using Chat.Data;
+    using Chat.Data.Repositories;
+    using Chat.Services.Engines;
+    using Chat.Services.Interfaces;
+    using Chat.SignalR;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.EntityFrameworkCore;

@@ -1,4 +1,4 @@
-namespace chat.Cache
+namespace Chat.Cache
 {
     public class CacheKeys
     {

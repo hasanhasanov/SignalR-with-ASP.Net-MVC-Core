@@ -1,11 +1,11 @@
-using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-using chat.Data.Entities;
-
-namespace chat.Data.Repositories
+namespace Chat.Data.Repositories
 {
+    using System;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Threading.Tasks;
+    using Chat.Data.Entities;
+
     public interface IRepository<T> where T : IBaseEntity
     {
         IQueryable<T> Find(Expression<Func<T, bool>> includes);

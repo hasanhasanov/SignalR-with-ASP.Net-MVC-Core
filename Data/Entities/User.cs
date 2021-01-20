@@ -1,7 +1,7 @@
-using System.Collections.Generic;
-
-namespace chat.Data.Entities
+namespace Chat.Data.Entities
 {
+    using System.Collections.Generic;
+    
     public class User : BaseEntity
     {
         private ICollection<Conversation> _conversations;

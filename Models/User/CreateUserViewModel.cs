@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace chat.Models.User
+namespace Chat.Models.User
 {
     public class CreateUserViewModel
     {

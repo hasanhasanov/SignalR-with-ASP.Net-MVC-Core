@@ -1,13 +1,13 @@
-namespace chat.Services.Engines
+namespace Chat.Services.Engines
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using chat.Cache;
-    using chat.Data.Entities;
-    using chat.Data.Repositories;
-    using chat.Services.Interfaces;
+    using Chat.Cache;
+    using Chat.Data.Entities;
+    using Chat.Data.Repositories;
+    using Chat.Services.Interfaces;
 
     /// <summary>
     ///* Kullanıcılar ile ilgili işlemler (CRUD) yapılır

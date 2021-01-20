@@ -1,4 +1,4 @@
-namespace chat.Cache
+namespace Chat.Cache
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;

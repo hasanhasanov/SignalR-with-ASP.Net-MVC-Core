@@ -1,8 +1,8 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace chat.Data.Entities
+namespace Chat.Data.Entities
 {
+    using System;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public class BaseEntity : IBaseEntity
     {
         public int Id { get; set; }

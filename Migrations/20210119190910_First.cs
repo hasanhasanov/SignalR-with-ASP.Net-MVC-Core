@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace chat.Migrations
+namespace Chat.Migrations
 {
     public partial class First : Migration
     {

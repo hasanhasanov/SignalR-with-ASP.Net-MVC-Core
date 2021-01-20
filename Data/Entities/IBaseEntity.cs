@@ -1,7 +1,7 @@
-using System;
-
-namespace chat.Data.Entities
+namespace Chat.Data.Entities
 {
+    using System;
+
     public interface IBaseEntity
     {
         int Id { get; set; }

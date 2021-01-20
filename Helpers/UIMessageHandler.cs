@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
-namespace chat.Helpers
+namespace Chat.Helpers
 {
     public static class UIMessageHandler
     {

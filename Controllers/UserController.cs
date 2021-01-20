@@ -1,13 +1,14 @@
-﻿namespace chat.Controllers
+﻿namespace Chat.Controllers
 {
     using System;
     using System.Threading.Tasks;
-    using chat.Data.Entities;
-    using chat.Helpers;
-    using chat.Models.User;
-    using chat.Services.Interfaces;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
+    using Chat.Models;
+    using Chat.Services.Interfaces;
+    using Chat.Models.User;
+    using Chat.Data.Entities;
+    using Chat.Helpers;
 
     public class UserController : Controller
     {
@@ -49,7 +50,7 @@
 
                 await _userService.CreateAsync(entity);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home", new IndexViewModel { UserId = entity.Id });
             }
             catch (Exception ex)
             {

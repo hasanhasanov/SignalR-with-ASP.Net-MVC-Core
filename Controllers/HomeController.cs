@@ -1,40 +1,56 @@
-﻿namespace chat.Controllers
+﻿namespace Chat.Controllers
 {
     //* Namespace'lerin aşağıda olmasının nedeni kütüphane isimlerinin kısa yazılmasına olanak sağlar, böylece eğer büyük projeniz var ise boyutunu biraz olsa da indirmiş olursunuz ve ilk açıldığında çabuk açılmasına yardımcı olur (görülmeyecek kadar fark bunlar)
     using System.Diagnostics;
+    using System.Linq;
+    using Data.Entities;
+    using Data.Repositories;
+    using Models;
+    using Models.Group;
+    using Models.User;
+    using Services.Interfaces;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using chat.Models;
-    using chat.Data.Repositories;
-    using chat.Data.Entities;
-    using System.Linq;
-    using chat.Models.Group;
 
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IRepository<Group> _groupRepository;
+        private readonly IUserService _userservice;
 
         public HomeController(
             ILogger<HomeController> logger,
+            IUserService userservice,
             IRepository<Group> groupRepository)
         {
             _logger = logger;
+            _userservice = userservice;
             _groupRepository = groupRepository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(IndexViewModel model)
         {
             //* Tüm Grupları çek
             var groups = _groupRepository.GetAll();
 
-            var result = new HomeViewModel();
+            //* Tüm Kullanıcıları çek
+            var users = _userservice.GetAsync();
 
-            result.Groups = groups.Select(x => new GroupViewModel
+            //* Response modeli oluştur
+            var result = new IndexViewModel
             {
-                Id = x.Id,
-                Name = x.Name
-            }).ToList();
+                Groups = groups.Select(x => new GroupViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name
+                }).ToList(),
+
+                Users = groups.Select(x => new UserViewModel
+                {
+                    Id = x.Id,
+                    UserName = x.Name
+                }).ToList()
+            };
 
             return View(result);
         }

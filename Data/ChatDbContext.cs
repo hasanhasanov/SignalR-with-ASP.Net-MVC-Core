@@ -1,8 +1,8 @@
 using System;
-using chat.Data.Entities;
+using Chat.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace chat.Data
+namespace Chat.Data
 {
     public class ChatDbContext : DbContext, IDisposable
     {

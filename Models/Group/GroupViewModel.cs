@@ -1,4 +1,4 @@
-namespace chat.Models.Group
+namespace Chat.Models.Group
 {
     public class GroupViewModel
     {

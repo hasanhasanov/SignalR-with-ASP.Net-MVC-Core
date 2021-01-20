@@ -1,8 +1,8 @@
-namespace chat.Services.Interfaces
+namespace Chat.Services.Interfaces
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using chat.Data.Entities;
+    using Chat.Data.Entities;
 
     public interface IUserService
     {

@@ -1,4 +1,4 @@
-namespace chat.Services.Interfaces
+namespace Chat.Services.Interfaces
 {
     public interface IConversationService
     {

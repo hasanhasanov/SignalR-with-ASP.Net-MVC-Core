@@ -1,12 +1,12 @@
-using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
-using chat.Data.Entities;
-using Microsoft.EntityFrameworkCore;
-
-namespace chat.Data.Repositories
+namespace Chat.Data.Repositories
 {
+    using System;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.Threading.Tasks;
+    using Chat.Data.Entities;
+    using Microsoft.EntityFrameworkCore;
+
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
 

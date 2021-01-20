@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using chat.Data.Entities;
+using Chat.Data.Entities;
 
-namespace chat.Data
+namespace Chat.Data
 {
     public class Data
     {

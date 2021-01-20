@@ -1,12 +1,12 @@
 namespace chat
 {
     using System;
-    using chat.Data;
+    using Chat.Data;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
-    using static chat.Data.Data;
+    using static Chat.Data.Data;
 
     public class Program
     {
