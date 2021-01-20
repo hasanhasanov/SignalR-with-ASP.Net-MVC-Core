@@ -1,0 +1,59 @@
+@model CreateUserViewModel
+@{
+    ViewData["Title"] = "Giriş yap";
+}
+<div class="panel">
+    <div class="top">
+        <div class="container">
+            <div class="col-md">
+                <div class="user">
+                    <div class="row swap-detail">
+                        <div class="content">
+                            <h2>Kullanıcı Adı Oluştur</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section>
+                        <form asp-area="" asp-controller="User" asp-action="Create" method="post">
+                            <div class="big-form">
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div asp-validation-summary="All" class="text-danger"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label asp-for="UserName" class="control-label">Kullanıcı adı<span class="required">*</span></label>
+                                            <input type="text" asp-for="UserName" class="form-control" required> </textarea>
+                                            <span asp-validation-for="UserName" class="text-danger"></span>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success">Oluştur</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {}
+
+
