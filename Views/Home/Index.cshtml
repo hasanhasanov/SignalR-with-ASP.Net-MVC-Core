@@ -3,16 +3,30 @@
     ViewData["Title"] = "Home Page";
 }
 
-@* <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> *@
+<style>
+    #verticle {
+        border-left: 4px solid cornflowerblue;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        margin-left: -2px;
+    }
+</style>
 
 
-<div class="container">
-    <div class="row">&nbsp;</div>
+<div class="container">  
     <input type="hidden" asp-for="@Model.UserId" />
+
     <div class="row">
+        <div class="col-4">
+            <div id="verticle"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            
+        </div>
         <div class="col-2">User</div>
         <div class="col-4"><input type="text" id="userInput" /></div>
     </div>
@@ -20,12 +34,19 @@
         <div class="col-2">Message</div>
         <div class="col-4"><input type="text" id="messageInput" /></div>
     </div>
-    <div class="row">&nbsp;</div>
+  
     <div class="row">
         <div class="col-6">
             <input type="button" id="sendButton" value="Send Message" />
         </div>
     </div>
+
+   <div class="row">
+        <div class="col-4">
+            <div id="verticle"></div>
+        </div>
+    </div>
+
 </div>
 <div class="row">
     <div class="col-12">

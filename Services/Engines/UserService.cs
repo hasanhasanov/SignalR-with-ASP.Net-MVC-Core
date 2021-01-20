@@ -72,7 +72,10 @@ namespace Chat.Services.Engines
             //* Mevcutta bu ver' var mi kontrol et
             var existsUser = _userRepository.FindOne(x => x.Name.ToLower() == user.Name.ToLower().Trim());
             if (existsUser != null)
+            {
+                user.Id = existsUser.Id;
                 return;
+            }
 
             //* DB ye yen' kayit ekle
             await _userRepository.CreateAsync(user);
